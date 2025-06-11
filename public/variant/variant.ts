@@ -1,8 +1,5 @@
 // animations/fadeIn.ts
-export const fadeIn = (
-  direction: 'up' | 'down' | 'left' | 'right',
-  delay: number
-) => {
+export const fadeIn = (direction: 'up' | 'down' | 'left' | 'right', delay: number) => {
   const isUp = direction === 'up';
   const isDown = direction === 'down';
   const isLeft = direction === 'left';
@@ -11,7 +8,7 @@ export const fadeIn = (
   return {
     hidden: {
       y: isUp ? 40 : isDown ? -40 : 0,
-      x: isLeft ? -40 : isRight ? 40 : 0,
+      x: isLeft ? 40 : isRight ? -40 : 0,
       scale: 0.9,
       opacity: 0,
     },
