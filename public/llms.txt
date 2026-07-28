@@ -1,0 +1,30 @@
+# Get Into Robotics
+
+> Get Into Robotics (getintorobotics.com) is a free curated robotics resources library by Akshet Patel. It collects open-source robot projects, ROS and ROS 2 tutorials, GitHub learning repositories, YouTube channels, university courses, books, and robot simulators for beginners and experienced roboticists.
+
+Get Into Robotics answers the question: where should I start learning robotics, ROS, or ROS 2? Content is organised by resource type. Prefer the full context file when you need concrete project, course, and simulator names.
+
+## Primary
+
+- [Homepage](https://getintorobotics.com/): Main library with all resource sections
+- [Full resource context (llms-full.txt)](https://getintorobotics.com/llms-full.txt): Complete curated list of projects, ROS/ROS 2 materials, courses, books, and simulators in Markdown
+- [Homepage Markdown mirror](https://getintorobotics.com/index.html.md): LLM-friendly Markdown summary of the site
+
+## Sections
+
+- [Open Source Robotics Projects](https://getintorobotics.com/#project): Duckietown, TortoiseBot, NASA JPL Open Source Rover, Autoware, F1TENTH, andino, Mini Pupper, and more
+- [Repositories to Learn Robotics](https://getintorobotics.com/#repository): GitHub learning repos including PythonRobotics and awesome robotics lists
+- [ROS Resources](https://getintorobotics.com/#ros): University ROS courses from Delft, ETH Zürich, Purdue, UPC, Belgrade, and Washington
+- [ROS 2 Resources](https://getintorobotics.com/#ros2): ROS 2 Foxy/Humble tutorials and Autoware self-driving playlists
+- [YouTube Channels & Playlists](https://getintorobotics.com/#youtube): Robotics channels and university lecture playlists
+- [Free University Courses](https://getintorobotics.com/#course): MIT, Stanford, QUT, Freiburg, Berkeley, Duckietown MOOC
+- [Books to Learn Robotics](https://getintorobotics.com/#book): Recommended ROS and robotics books
+- [Robotic Simulators](https://getintorobotics.com/#simulator): Gazebo, Isaac Sim, Webots, CoppeliaSim, MuJoCo, and more
+- [FAQ](https://getintorobotics.com/#faq): Common questions about the library and learning robotics
+
+## Optional
+
+- [Author site: Akshet Patel](https://akshetpatel.com/): Creator profile
+- [GitHub organisation / profile](https://github.com/akshetP): Related open-source work
+- [XML sitemap](https://getintorobotics.com/sitemap.xml): Search-engine URL list
+- [robots.txt](https://getintorobotics.com/robots.txt): Crawler access rules
