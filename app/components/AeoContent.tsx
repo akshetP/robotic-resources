@@ -9,7 +9,6 @@ import { useInteractionMotion, useReveal } from "@/lib/motion";
 
 export function AnswerIntro() {
   const reveal = useReveal("up", 0.08, 0.25);
-  const cardMotion = useInteractionMotion(true);
   const linkMotion = useInteractionMotion(true);
 
   return (
@@ -20,7 +19,6 @@ export function AnswerIntro() {
     >
       <motion.div
         {...reveal}
-        {...cardMotion}
         className="rounded-[20px] border-2 border-[#0004FF] bg-white p-5 shadow-[0_1px_3px_rgba(11,18,32,0.04)] transition-shadow duration-300 hover:shadow-[0_2px_8px_rgba(11,18,32,0.06)] sm:p-6 md:p-8"
       >
         <h2
@@ -74,11 +72,26 @@ export function AnswerIntro() {
   );
 }
 
+function FaqItem({ question, answer }: { question: string; answer: string }) {
+  const reveal = useReveal("up", 0.08, 0.2);
+
+  return (
+    <motion.details
+      {...reveal}
+      className="faq-item rounded-[20px] border-2 border-[#0004FF] bg-white p-4 shadow-[0_1px_3px_rgba(11,18,32,0.04)] sm:p-5"
+    >
+      <summary className="cursor-pointer text-base font-semibold text-black sm:text-lg">
+        {question}
+      </summary>
+      <p className="mt-3 text-sm leading-relaxed text-black sm:text-base">
+        {answer}
+      </p>
+    </motion.details>
+  );
+}
+
 export function FaqSection() {
   const headingReveal = useReveal("up", 0.05);
-  // Hooks can't be called in a loop — reveal variants are static enough;
-  // use one shared reduced-motion-aware pattern per item via delay in props.
-  const itemReveal = useReveal("up", 0.08, 0.2);
 
   return (
     <section
@@ -95,31 +108,13 @@ export function FaqSection() {
       </motion.h2>
       <div className="space-y-3 sm:space-y-4">
         {faqs.map((faq) => (
-          <FaqItem key={faq.question} question={faq.question} answer={faq.answer} />
+          <FaqItem
+            key={faq.question}
+            question={faq.question}
+            answer={faq.answer}
+          />
         ))}
       </div>
-      {/* silence unused if tree-shaken oddly — itemReveal used in FaqItem via own hook */}
-      <span className="hidden" aria-hidden>
-        {itemReveal ? null : null}
-      </span>
     </section>
-  );
-}
-
-function FaqItem({ question, answer }: { question: string; answer: string }) {
-  const reveal = useReveal("up", 0.08, 0.2);
-
-  return (
-    <motion.details
-      {...reveal}
-      className="faq-item rounded-[20px] border-2 border-[#0004FF] bg-white p-4 shadow-[0_1px_3px_rgba(11,18,32,0.04)] sm:p-5"
-    >
-      <summary className="cursor-pointer text-base font-semibold text-black sm:text-lg">
-        {question}
-      </summary>
-      <p className="mt-3 text-sm leading-relaxed text-black sm:text-base">
-        {answer}
-      </p>
-    </motion.details>
   );
 }

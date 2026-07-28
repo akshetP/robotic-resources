@@ -7,7 +7,6 @@ import type { ReactNode, ComponentProps } from "react";
 import { NewTabHint } from "@/lib/a11y";
 import {
   hoverLift,
-  spring,
   staggerContainer,
   staggerItem,
   tapPress,

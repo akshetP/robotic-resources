@@ -3,18 +3,35 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/public/variant/variant";
 import { socialLinks, resourceCards } from "./components/objects";
-import { staggerContainer } from "@/app/components/Interactive";
+import { NewTabHint, withNewTabLabel } from "@/lib/a11y";
+import {
+  staggerContainer,
+  staggerItem,
+  useInteractionMotion,
+  usePrefersReducedMotion,
+  useRevealAnimate,
+} from "@/lib/motion";
 
 export default function Home() {
+  const titleReveal = useRevealAnimate("up", 0.05);
+  const socialReveal = useRevealAnimate("up", 0.12);
+  const reduced = usePrefersReducedMotion();
+  const iconMotion = useInteractionMotion(true);
+
+  const gridProps = reduced
+    ? { initial: false as const }
+    : {
+        variants: staggerContainer,
+        initial: "hidden" as const,
+        animate: "show" as const,
+      };
+
   return (
     <div className="section-pad relative overflow-hidden">
       <div className="section-shell relative">
         <motion.h1
-          variants={fadeIn("up", 0.05)}
-          initial="hidden"
-          animate="show"
+          {...titleReveal}
           className="font-display mx-auto mb-8 max-w-4xl text-center text-2xl font-medium leading-tight text-black sm:text-3xl md:mb-12 md:text-4xl lg:text-5xl"
         >
           Robotics Resources by{" "}
@@ -25,28 +42,23 @@ export default function Home() {
             className="underline decoration-[var(--accent)]/30 underline-offset-4 transition-colors duration-300 hover:text-[#0004FF] hover:decoration-[#0004FF]"
           >
             Akshet Patel
+            <NewTabHint />
           </Link>
         </motion.h1>
 
         <div className="mx-auto flex max-w-4xl flex-col gap-5 md:gap-6">
           <motion.div
-            variants={fadeIn("up", 0.12)}
-            initial="hidden"
-            animate="show"
+            {...socialReveal}
             className="rounded-xl border-2 border-[#0004FF] bg-white p-3 shadow-[0_1px_3px_rgba(11,18,32,0.04)] sm:p-4"
           >
             <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8">
               {socialLinks.map((link) => (
-                <motion.div
-                  key={link.label}
-                  whileHover={{ y: -3, scale: 1.12 }}
-                  whileTap={{ scale: 0.9 }}
-                >
+                <motion.div key={link.label} {...iconMotion}>
                   <Link
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={link.label}
+                    aria-label={withNewTabLabel(link.label)}
                     className="icon-btn h-11 w-11 rounded-lg"
                   >
                     <Image
@@ -64,29 +76,19 @@ export default function Home() {
 
           <motion.div
             id="browse"
-            variants={staggerContainer}
-            initial="hidden"
-            animate="show"
+            {...gridProps}
             className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 md:gap-4"
           >
             {resourceCards.map((card) => (
               <motion.div
                 key={card.href + card.title}
-                variants={{
-                  hidden: { opacity: 0, y: 16, scale: 0.96 },
-                  show: {
-                    opacity: 1,
-                    y: 0,
-                    scale: 1,
-                    transition: { type: "spring", stiffness: 320, damping: 24 },
-                  },
-                }}
+                variants={reduced ? undefined : staggerItem}
               >
                 <Link
                   href={card.href}
                   className="home-tile group h-full min-h-[5.75rem] sm:min-h-[7.5rem] md:min-h-[9rem]"
                 >
-                  <span className="mb-2 flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--accent-soft)] transition-transform duration-300 group-hover:scale-110 sm:h-11 sm:w-11">
+                  <span className="mb-2 flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--accent-soft)] transition-transform duration-300 group-hover:scale-110 group-focus-visible:scale-110 sm:h-11 sm:w-11">
                     <Image
                       src={card.icon}
                       width={28}
