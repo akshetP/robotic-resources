@@ -3,9 +3,10 @@
 import ResourceSection from "@/app/components/ResourceSection";
 import { rosResources } from "@/app/data/ros";
 
-export default function RosPage() {
+export default function RosPage({ embed = false }: { embed?: boolean }) {
   return (
     <ResourceSection
+      embed={embed}
       id="ros"
       title="ROS Resources"
       description="University courses and community collections for the classic Robot Operating System."

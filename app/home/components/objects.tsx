@@ -10,41 +10,41 @@ export const resourceCards = [
   {
     title: 'Open Source Robotics Projects GitHub Repositories',
     icon: '/icons/project.svg',
-    href: '#project'
+    href: '/projects'
   },
   {
     title: 'Github Repositories to Learn Robotics',
     icon: '/icons/repository.svg',
-     href: '#repository'
+     href: '/repositories'
   },
   {
     title: 'ROS Resources',
     icon: '/icons/ros.svg',
-    href: '#ros'
+    href: '/ros'
   },
   {
     title: 'ROS2 Resources',
     icon: '/icons/ros.svg',
-    href: '#ros2'
+    href: '/ros2'
   },
   {
     title: 'YouTube Channels & Playlists to Learn Robotics',
     icon: '/icons/mdi_youtube.svg',
-    href: '#youtube'
+    href: '/youtube'
   },
   {
     title: 'Free University Courses',
     icon: '/icons/streamline_class-lesson-solid.svg',
-    href: '#course'
+    href: '/courses'
   },
   {
     title: 'Books to Learn Robotics',
     icon: '/icons/icon-park-solid_bookshelf.svg',
-    href: '#book'
+    href: '/books'
   },
   {
     title: 'Robotic Simulators',
     icon: '/icons/ix_project-simulation.svg',
-    href: '#simulator'
+    href: '/simulators'
   }
 ];

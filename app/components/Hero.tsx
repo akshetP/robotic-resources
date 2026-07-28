@@ -7,7 +7,6 @@ import { useInteractionMotion, useRevealAnimate } from "@/lib/motion";
 
 export default function Hero() {
   const eyebrow = useRevealAnimate("up", 0.05);
-  const title = useRevealAnimate("up", 0.12);
   const body = useRevealAnimate("up", 0.2);
   const actions = useRevealAnimate("up", 0.28);
   const primaryMotion = useInteractionMotion(true);
@@ -35,12 +34,10 @@ export default function Hero() {
           </Link>
         </motion.p>
 
-        <motion.h1
-          {...title}
-          className="font-display max-w-4xl text-4xl leading-[1.05] font-semibold tracking-tight text-[var(--foreground)] sm:text-5xl md:text-7xl"
-        >
+        {/* Keep H1 visible in prerendered HTML for SEO / LCP (no opacity:0). */}
+        <h1 className="font-display max-w-4xl text-4xl leading-[1.05] font-semibold tracking-tight text-[var(--foreground)] sm:text-5xl md:text-7xl">
           Get Into Robotics
-        </motion.h1>
+        </h1>
 
         <motion.p
           {...body}
@@ -56,13 +53,18 @@ export default function Hero() {
           className="mt-8 flex flex-wrap items-center gap-3 sm:mt-10"
         >
           <motion.div {...primaryMotion}>
-            <Link href="#browse" className="btn-primary pulse-ring">
+            <Link href="/#browse" className="btn-primary pulse-ring">
               Browse resources
             </Link>
           </motion.div>
           <motion.div {...secondaryMotion}>
-            <Link href="#ros2" className="btn-secondary">
+            <Link href="/ros2" className="btn-secondary">
               Explore ROS 2
+            </Link>
+          </motion.div>
+          <motion.div {...secondaryMotion}>
+            <Link href="/guides/start-ros2" className="btn-secondary">
+              Start ROS 2 guide
             </Link>
           </motion.div>
         </motion.div>

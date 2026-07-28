@@ -87,7 +87,7 @@ export default function Header() {
       <div className="section-shell flex items-center justify-between gap-3 py-3">
         <motion.div {...brandMotion}>
           <Link
-            href="#home"
+            href="/"
             className="font-display text-base font-semibold tracking-tight text-[var(--foreground)] transition-colors hover:text-[var(--accent)] sm:text-lg md:text-xl"
             onClick={closeMenu}
           >
@@ -118,7 +118,7 @@ export default function Header() {
             </motion.div>
           ))}
           <motion.div {...ctaMotion}>
-            <Link href="#browse" className="btn-primary ml-1 px-4 py-2">
+            <Link href="/#browse" className="btn-primary ml-1 px-4 py-2">
               Browse
             </Link>
           </motion.div>

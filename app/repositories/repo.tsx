@@ -3,7 +3,7 @@
 import ResourceSection from "@/app/components/ResourceSection";
 import { Repositories } from "./components/objects";
 
-export default function RoboticsRepositories() {
+export default function RoboticsRepositories({ embed = false }: { embed?: boolean }) {
   const items = Repositories.map((repo) => ({
     title: repo.displayName,
     href: repo.href,
@@ -12,6 +12,7 @@ export default function RoboticsRepositories() {
 
   return (
     <ResourceSection
+      embed={embed}
       id="repository"
       title="GitHub Repositories to Learn Robotics"
       description="Awesome lists, courseware, papers, and codebases for deeper study."

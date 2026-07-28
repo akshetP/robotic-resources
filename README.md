@@ -1,5 +1,11 @@
-# robotics-resources
-A complete library of resources that caters to all levels of Roboticists.
+# Get Into Robotics
+
+Free curated robotics resources library — live site: [getintorobotics.com](https://getintorobotics.com)
+
+- Agent index: [llms.txt](https://getintorobotics.com/llms.txt) · [llms-full.txt](https://getintorobotics.com/llms-full.txt)
+- Guides: [/guides](https://getintorobotics.com/guides) · About: [/about](https://getintorobotics.com/about) · FAQ: [/faq](https://getintorobotics.com/faq)
+
+---
 
 **1. Open Source Robotics Projects:**
 - [Duckietown](https://github.com/duckietown) - Duckietown is a robotics and AI ecosystem for education and research.

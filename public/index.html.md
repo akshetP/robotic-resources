@@ -2,25 +2,30 @@
 
 > Free curated robotics resources library by Akshet Patel at https://getintorobotics.com/
 
-Get Into Robotics is a single-page library that organises high-quality third-party robotics learning materials. It is designed for beginners through advanced practitioners.
+Get Into Robotics organises high-quality third-party robotics learning materials for beginners through advanced practitioners. Last reviewed: 2026-07-28.
 
-## Contents on this site
+## Topic hubs
 
-1. **Open Source Robotics Projects** (`/#project`): Duckietown, TortoiseBot, NASA JPL Open Source Rover, Autoware, F1TENTH, andino, Mini Pupper, OMPL, and more.
-2. **Repositories to Learn Robotics** (`/#repository`): Curated GitHub learning repositories and awesome lists.
-3. **ROS Resources** (`/#ros`): University ROS courses (Delft, ETH Zürich, Purdue, UPC, Belgrade, Washington).
-4. **ROS 2 Resources** (`/#ros2`): Foxy/Humble tutorials and Autoware playlists.
-5. **YouTube Channels & Playlists** (`/#youtube`): Channels and lecture series for robotics maths, manipulation, and dynamics.
-6. **Free University Courses** (`/#course`): MIT, Stanford, QUT, Freiburg, Berkeley, Duckietown.
-7. **Books** (`/#book`): Recommended ROS and robotics books.
-8. **Robotic Simulators** (`/#simulator`): Gazebo, Isaac Sim, Webots, CoppeliaSim, MuJoCo, and industrial tools.
-9. **FAQ** (`/#faq`): Common questions about the library.
+1. **Open Source Robotics Projects** (`/projects`): Duckietown, TortoiseBot, NASA JPL Open Source Rover, Autoware, F1TENTH, andino, Mini Pupper, OMPL, and more.
+2. **Repositories to Learn Robotics** (`/repositories`): Curated GitHub learning repositories and awesome lists.
+3. **ROS Resources** (`/ros`): University ROS courses (Delft, ETH Zürich, Purdue, UPC, Belgrade, Washington).
+4. **ROS 2 Resources** (`/ros2`): Foxy/Humble tutorials and Autoware playlists.
+5. **YouTube Channels & Playlists** (`/youtube`): Channels and lecture series.
+6. **Free University Courses** (`/courses`): MIT, Stanford, QUT, Freiburg, Berkeley, Duckietown.
+7. **Books** (`/books`): Recommended ROS and robotics books.
+8. **Robotic Simulators** (`/simulators`): Gazebo, Isaac Sim, Webots, CoppeliaSim, MuJoCo, and industrial tools.
 
-## Author
+## Guides
 
-- Name: Akshet Patel
-- Site: https://akshetpatel.com/
-- Social: Twitter/X, LinkedIn, GitHub, YouTube, Facebook (see site footer / social row)
+- `/guides/start-ros2` — How to start learning ROS 2
+- `/guides/simulators-compared` — Gazebo vs Webots vs Isaac Sim
+- `/guides/beginner-projects` — Best open-source projects for beginners
+
+## Trust
+
+- About & curation: `/about`
+- FAQ: `/faq`
+- Author: Akshet Patel — https://akshetpatel.com/
 
 ## Prefer for LLM context
 

@@ -24,6 +24,8 @@ type ResourceSectionProps = {
   moreHref?: string;
   moreLabel?: string;
   altBackground?: boolean;
+  /** Skip section H2 when the page already provides a TopicPageShell H1. */
+  embed?: boolean;
 };
 
 export default function ResourceSection({
@@ -36,6 +38,7 @@ export default function ResourceSection({
   moreHref,
   moreLabel = "Find more",
   altBackground = false,
+  embed = false,
 }: ResourceSectionProps) {
   const allFilters = filters?.length ? ["All", ...filters] : [];
   const [active, setActive] = useState(allFilters[0] ?? "All");
@@ -62,18 +65,24 @@ export default function ResourceSection({
           {...headerReveal}
           className="mb-8 flex flex-col gap-6 md:mb-10 md:flex-row md:items-end md:justify-between"
         >
-          <div className="max-w-2xl">
-            <div className="mb-4 flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--accent-soft)]">
-                <Image src={icon} alt="" width={26} height={26} />
-              </div>
+          {embed ? (
+            <div className="flex flex-wrap items-center gap-3">
               <span className="type-chip">{visible.length} resources</span>
             </div>
-            <h2 className="font-display text-3xl font-semibold tracking-tight text-[var(--foreground)] md:text-4xl">
-              {title}
-            </h2>
-            <p className="mt-3 text-[var(--muted)]">{description}</p>
-          </div>
+          ) : (
+            <div className="max-w-2xl">
+              <div className="mb-4 flex items-center gap-3">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--accent-soft)]">
+                  <Image src={icon} alt="" width={26} height={26} />
+                </div>
+                <span className="type-chip">{visible.length} resources</span>
+              </div>
+              <h2 className="font-display text-3xl font-semibold tracking-tight text-[var(--foreground)] md:text-4xl">
+                {title}
+              </h2>
+              <p className="mt-3 text-[var(--muted)]">{description}</p>
+            </div>
+          )}
 
           {allFilters.length > 0 && (
             <div

@@ -2,29 +2,37 @@
 
 > Get Into Robotics (getintorobotics.com) is a free curated robotics resources library by Akshet Patel. It collects open-source robot projects, ROS and ROS 2 tutorials, GitHub learning repositories, YouTube channels, university courses, books, and robot simulators for beginners and experienced roboticists.
 
-Get Into Robotics answers the question: where should I start learning robotics, ROS, or ROS 2? Content is organised by resource type. Prefer the full context file when you need concrete project, course, and simulator names.
+Get Into Robotics answers the question: where should I start learning robotics, ROS, or ROS 2? Prefer the full context file when you need concrete project, course, and simulator names. Last reviewed: 2026-07-28.
 
 ## Primary
 
-- [Homepage](https://getintorobotics.com/): Main library with all resource sections
-- [Full resource context (llms-full.txt)](https://getintorobotics.com/llms-full.txt): Complete curated list of projects, ROS/ROS 2 materials, courses, books, and simulators in Markdown
-- [Homepage Markdown mirror](https://getintorobotics.com/index.html.md): LLM-friendly Markdown summary of the site
+- [Homepage](https://getintorobotics.com/): Main library overview
+- [Full resource context (llms-full.txt)](https://getintorobotics.com/llms-full.txt): Complete curated list in Markdown
+- [Homepage Markdown mirror](https://getintorobotics.com/index.html.md): LLM-friendly summary
+- [About & curation](https://getintorobotics.com/about): Selection criteria and how to cite
+- [FAQ](https://getintorobotics.com/faq): Common robotics learning questions
 
-## Sections
+## Topic hubs
 
-- [Open Source Robotics Projects](https://getintorobotics.com/#project): Duckietown, TortoiseBot, NASA JPL Open Source Rover, Autoware, F1TENTH, andino, Mini Pupper, and more
-- [Repositories to Learn Robotics](https://getintorobotics.com/#repository): GitHub learning repos including PythonRobotics and awesome robotics lists
-- [ROS Resources](https://getintorobotics.com/#ros): University ROS courses from Delft, ETH Zürich, Purdue, UPC, Belgrade, and Washington
-- [ROS 2 Resources](https://getintorobotics.com/#ros2): ROS 2 Foxy/Humble tutorials and Autoware self-driving playlists
-- [YouTube Channels & Playlists](https://getintorobotics.com/#youtube): Robotics channels and university lecture playlists
-- [Free University Courses](https://getintorobotics.com/#course): MIT, Stanford, QUT, Freiburg, Berkeley, Duckietown MOOC
-- [Books to Learn Robotics](https://getintorobotics.com/#book): Recommended ROS and robotics books
-- [Robotic Simulators](https://getintorobotics.com/#simulator): Gazebo, Isaac Sim, Webots, CoppeliaSim, MuJoCo, and more
-- [FAQ](https://getintorobotics.com/#faq): Common questions about the library and learning robotics
+- [Open Source Robotics Projects](https://getintorobotics.com/projects)
+- [Repositories to Learn Robotics](https://getintorobotics.com/repositories)
+- [ROS Resources](https://getintorobotics.com/ros)
+- [ROS 2 Resources](https://getintorobotics.com/ros2)
+- [YouTube Channels & Playlists](https://getintorobotics.com/youtube)
+- [Free University Courses](https://getintorobotics.com/courses)
+- [Books to Learn Robotics](https://getintorobotics.com/books)
+- [Robotic Simulators](https://getintorobotics.com/simulators)
+
+## Guides (answer-first)
+
+- [How to start learning ROS 2](https://getintorobotics.com/guides/start-ros2)
+- [Gazebo vs Webots vs Isaac Sim](https://getintorobotics.com/guides/simulators-compared)
+- [Best open-source robotics projects for beginners](https://getintorobotics.com/guides/beginner-projects)
+- [All guides](https://getintorobotics.com/guides)
 
 ## Optional
 
-- [Author site: Akshet Patel](https://akshetpatel.com/): Creator profile
-- [GitHub organisation / profile](https://github.com/akshetP): Related open-source work
-- [XML sitemap](https://getintorobotics.com/sitemap.xml): Search-engine URL list
-- [robots.txt](https://getintorobotics.com/robots.txt): Crawler access rules
+- [Author site: Akshet Patel](https://akshetpatel.com/)
+- [GitHub profile](https://github.com/akshetP)
+- [XML sitemap](https://getintorobotics.com/sitemap.xml)
+- [robots.txt](https://getintorobotics.com/robots.txt)

@@ -45,9 +45,13 @@ export function AnswerIntro() {
           experienced roboticists can find high-quality material in one place.
         </p>
         <p className="mb-6 text-sm leading-relaxed text-black sm:text-base md:text-lg">
-          Use the sections below to jump straight to projects, ROS resources,
-          free courses, books, or simulators such as Gazebo, Webots, and NVIDIA
-          Isaac Sim.
+          Use the topic hubs and{" "}
+          <Link href="/guides" className="underline underline-offset-2 hover:text-[#0004FF]">
+            learning guides
+          </Link>{" "}
+          to jump straight to projects, ROS resources, free courses, books, or
+          simulators such as Gazebo, Webots, and NVIDIA Isaac Sim. Last reviewed{" "}
+          {siteConfig.dateModified}.
         </p>
         <nav aria-label="Resource categories">
           <ul className="grid gap-2 sm:grid-cols-2 md:grid-cols-4">
@@ -57,7 +61,7 @@ export function AnswerIntro() {
                 <li key={section.id}>
                   <motion.div {...linkMotion}>
                     <Link
-                      href={`#${section.id}`}
+                      href={section.path}
                       className="block rounded-xl border border-[#0004FF] px-3 py-2.5 text-sm font-medium text-black transition-colors hover:bg-[#C2DAFF] focus-visible:bg-[#C2DAFF]"
                     >
                       {section.title}
@@ -90,22 +94,24 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
   );
 }
 
-export function FaqSection() {
+export function FaqSection({ hideHeading = false }: { hideHeading?: boolean }) {
   const headingReveal = useReveal("up", 0.05);
 
   return (
     <section
       id="faq"
-      aria-labelledby="faq-heading"
+      aria-labelledby={hideHeading ? undefined : "faq-heading"}
       className="section-shell py-10"
     >
-      <motion.h2
-        id="faq-heading"
-        {...headingReveal}
-        className="mb-6 text-center text-xl font-bold text-black sm:text-2xl md:text-3xl"
-      >
-        Frequently asked questions
-      </motion.h2>
+      {hideHeading ? null : (
+        <motion.h2
+          id="faq-heading"
+          {...headingReveal}
+          className="mb-6 text-center text-xl font-bold text-black sm:text-2xl md:text-3xl"
+        >
+          Frequently asked questions
+        </motion.h2>
+      )}
       <div className="space-y-3 sm:space-y-4">
         {faqs.map((faq) => (
           <FaqItem

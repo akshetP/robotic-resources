@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
             <Link
-              href="#home"
+              href="/"
               className="font-display text-xl font-semibold text-[var(--foreground)] transition-colors hover:text-[var(--accent)]"
             >
               {siteConfig.name}
@@ -73,7 +73,7 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <Link href="#faq" className="footer-link">
+                <Link href="/faq" className="footer-link">
                   FAQ
                 </Link>
               </li>
@@ -94,6 +94,21 @@ export default function Footer() {
                 >
                   {siteConfig.author.name}
                   <NewTabHint />
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="footer-link">
+                  About & curation
+                </Link>
+              </li>
+              <li>
+                <Link href="/guides/start-ros2" className="footer-link">
+                  Learning guides
+                </Link>
+              </li>
+              <li>
+                <Link href="/llms.txt" className="footer-link">
+                  llms.txt
                 </Link>
               </li>
               <li>
