@@ -7,7 +7,7 @@ A complete library of resources that caters to all levels of Roboticists.
 - [ROSbloX](https://rosblox.github.io/) - ROSbloX are building blocks that simplify the creation of a robot's software stack.
 - [andino](https://github.com/Ekumen-OS/andino) - Andino is a fully open-source diff drive robot designed for educational purposes and low-cost applications.
 - [Open-Source Rover by NASA Jet Propulsion Laboratory](https://github.com/nasa-jpl/open-source-rover#getting-started) - The JPL Open Source Rover is an open source, build it yourself, scaled down version of the 6 wheel rover design that JPL uses to explore the surface of Mars.
-- [F1TENTH](https://f1tenth.org/learn.html) - F1TENTH is a fun, fast-paced, and flexible course that teaches the foundations of Autonomy.
+- [F1TENTH](https://f1tenth.readthedocs.io/en/main/) - F1TENTH is a fun, fast-paced, and flexible course that teaches the foundations of Autonomy.
 - [The Autoware Foundation](https://github.com/autowarefoundation) - The world's leading open-source software project for autonomous driving, and sponsors Autoware-based projects all over the world.
 - [OpenPodCar](https://github.com/OpenPodcar/OpenPodcar) - The OpenPodcar is an affordable and open-source hardware and software platform for self-driving car research.
 - [Mini Pupper](https://minipupperdocs.readthedocs.io/en/latest/index.html) - ROS, OpenCV, Open-source, Pi Robot Dog.
@@ -69,7 +69,7 @@ A complete library of resources that caters to all levels of Roboticists.
 ***Channels***
 - [Duckietown](https://www.youtube.com/@duckietown)
 - [LearnRobotics by Liz Miller](https://www.youtube.com/@LearnRobotics)
-- [aniskoubaa2327 by Anis Koubaa](https://www.youtube.com/@aniskoubaa2327)
+- [Anis Koubaa](https://www.youtube.com/@aniskoubaa)
 - [ArticulatedRobotics by Articulated Robotics](https://www.youtube.com/@ArticulatedRobotics)
 - [Dronebotworkshop](https://www.youtube.com/@Dronebotworkshop)
 - [HashRobotics](https://www.youtube.com/@HashRobotics)
@@ -103,12 +103,12 @@ A complete library of resources that caters to all levels of Roboticists.
 
 
 **7. Books to learn Robotics**
-- [ROS Robotics by Example](https://sceweb.sce.uhcl.edu/harman/CENG5437_MobileRobots/Webitems2020/ROS_ROBOTICS_BY_EXAMPLE_SECOND_EDITION.pdf)
+- [ROS Robotics by Example](https://github.com/PacktPublishing/ROS-Robotics-By-Example-Second-Edition)
 - [ROS Robot Programming](https://www.pishrobot.com/wp-content/uploads/2021/05/ros-robot-programming-book-by-turtlebo3-developers-en.pdf)
 - [Learning ROS for Robotics Programming](https://github.com/fjibj/ROSplay/blob/master/Learning%20ROS%20for%20Robotics%20Programming%20-%20Second%20Edition.pdf)
 - [A Gentle Introduction to ROS](https://jokane.net/agitr/agitr-letter.pdf)
 - [Programming Robots with ROS](http://alvarestech.com/temp/capp/GDT_Forma3D/Programming%20Robots%20with%20ROS%20by%20Morgan%20Quigley,%20Brian%20Gerkey,%20William%20D.%20Smart%20(z-lib.org).pdf)
-- [Robot Operating System for Absolute Beginners](http://wiki.iranros.com/wp-content/uploads/2019/10/Lentin-Joseph-Robot-Operating-SystemROSfor-Absolute-Beginners_IRANROS.COM2018.pdf)
+- [Robot Operating System for Absolute Beginners](https://www.apress.com/gp/book/9781484231791)
 
 **8. Robotic Simulators**
 - [gym-duckietown](https://github.com/duckietown/gym-duckietown)

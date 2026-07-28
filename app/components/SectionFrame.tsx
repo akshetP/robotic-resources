@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/public/variant/variant";
-import { staggerContainer } from "./Interactive";
+import { useInteractionMotion, useReveal, useStagger } from "@/lib/motion";
 import type { ReactNode } from "react";
 
 type SectionFrameProps = {
@@ -23,6 +22,10 @@ export default function SectionFrame({
   tinted = false,
   subtitle,
 }: SectionFrameProps) {
+  const headerReveal = useReveal("up", 0.08, 0.35);
+  const stagger = useStagger(0.12);
+  const iconMotion = useInteractionMotion(true);
+
   return (
     <section
       id={id}
@@ -30,16 +33,11 @@ export default function SectionFrame({
     >
       <div className="section-shell relative">
         <motion.header
-          variants={fadeIn("up", 0.08)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.35 }}
+          {...headerReveal}
           className="mb-8 flex flex-col items-center text-center md:mb-12"
         >
           <motion.div
-            whileHover={{ rotate: -6, scale: 1.08 }}
-            whileTap={{ scale: 0.92 }}
-            transition={{ type: "spring", stiffness: 400, damping: 18 }}
+            {...iconMotion}
             className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/80 shadow-[0_1px_2px_rgba(11,18,32,0.04)] ring-1 ring-[var(--accent)]/15 md:mb-5 md:h-16 md:w-16"
           >
             <Image
@@ -60,13 +58,7 @@ export default function SectionFrame({
           ) : null}
         </motion.header>
 
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.12 }}
-          className="resource-grid"
-        >
+        <motion.div {...stagger} className="resource-grid">
           {children}
         </motion.div>
       </div>

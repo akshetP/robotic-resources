@@ -5,23 +5,19 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { socialLinks } from "@/app/home/components/objects";
 import { topics } from "@/app/data/topics";
+import { NewTabHint, withNewTabLabel } from "@/lib/a11y";
 import { siteConfig } from "@/lib/site";
-import { fadeIn } from "@/public/variant/variant";
+import { useReveal } from "@/lib/motion";
 
 export default function Footer() {
   const half = Math.ceil(topics.length / 2);
   const left = topics.slice(0, half);
   const right = topics.slice(half);
+  const reveal = useReveal("up", 0.05, 0.2);
 
   return (
     <footer className="mt-8 border-t border-[var(--border)] bg-white">
-      <motion.div
-        variants={fadeIn("up", 0.05)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="section-shell py-14"
-      >
+      <motion.div {...reveal} className="section-shell py-14">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
             <Link
@@ -40,7 +36,7 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={link.label}
+                  aria-label={withNewTabLabel(link.label)}
                   className="icon-btn h-9 w-9"
                 >
                   <Image src={link.icon} alt="" width={18} height={18} />
@@ -49,7 +45,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <nav aria-label="Browse topics">
             <h2 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
               Browse
             </h2>
@@ -62,9 +58,9 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          <div>
+          <nav aria-label="Learn more">
             <h2 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
               Learn
             </h2>
@@ -82,9 +78,9 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </nav>
 
-          <div>
+          <nav aria-label="About">
             <h2 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
               About
             </h2>
@@ -97,20 +93,16 @@ export default function Footer() {
                   className="footer-link"
                 >
                   {siteConfig.author.name}
+                  <NewTabHint />
                 </Link>
               </li>
               <li>
-                <Link
-                  href="https://www.muflih.me"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer-link"
-                >
+                <span className="text-sm text-black/70">
                   Developed by Mohammed Muflih
-                </Link>
+                </span>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
 
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-[var(--border)] pt-6 text-sm text-[var(--muted)] md:flex-row md:items-center">
@@ -123,9 +115,12 @@ export default function Footer() {
               className="underline underline-offset-2 hover:text-[var(--accent)]"
             >
               {siteConfig.author.name}
+              <NewTabHint />
             </Link>
           </p>
-          <p className="text-xs md:text-sm">Built for roboticists at every level.</p>
+          <p className="text-xs md:text-sm">
+            Built for roboticists at every level.
+          </p>
         </div>
       </motion.div>
     </footer>

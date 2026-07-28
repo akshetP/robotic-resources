@@ -1,13 +1,21 @@
 "use client";
 
+import { forwardRef } from "react";
 import { motion, type HTMLMotionProps } from "framer-motion";
 import Link from "next/link";
 import type { ReactNode, ComponentProps } from "react";
+import { NewTabHint } from "@/lib/a11y";
+import {
+  hoverLift,
+  spring,
+  staggerContainer,
+  staggerItem,
+  tapPress,
+  useInteractionMotion,
+  usePrefersReducedMotion,
+} from "@/lib/motion";
 
-const spring = { type: "spring" as const, stiffness: 420, damping: 24, mass: 0.6 };
-
-export const hoverLift = { y: -4, scale: 1.03 };
-export const tapPress = { scale: 0.96, y: 0 };
+export { hoverLift, tapPress, staggerContainer };
 
 type MotionLinkProps = ComponentProps<typeof Link> & {
   children: ReactNode;
@@ -21,13 +29,10 @@ export function MotionLink({
   lift = true,
   ...props
 }: MotionLinkProps) {
+  const interaction = useInteractionMotion(lift);
+
   return (
-    <motion.div
-      className="h-full w-full"
-      whileHover={lift ? hoverLift : undefined}
-      whileTap={tapPress}
-      transition={spring}
-    >
+    <motion.div className="h-full w-full" {...interaction}>
       <Link className={className} {...props}>
         {children}
       </Link>
@@ -49,22 +54,14 @@ export function ResourceTile({
   external = true,
 }: ResourceTileProps) {
   const isExternal = external && href.startsWith("http");
+  const reduced = usePrefersReducedMotion();
+  const interaction = useInteractionMotion(true);
 
   return (
     <motion.div
       className="h-full"
-      variants={{
-        hidden: { opacity: 0, y: 18, scale: 0.96 },
-        show: {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          transition: { type: "spring", stiffness: 320, damping: 24 },
-        },
-      }}
-      whileHover={hoverLift}
-      whileTap={tapPress}
-      transition={spring}
+      variants={reduced ? undefined : staggerItem}
+      {...interaction}
     >
       <Link
         href={href}
@@ -74,6 +71,7 @@ export function ResourceTile({
       >
         <span className="interactive-tile__shine" aria-hidden />
         {children}
+        {isExternal ? <NewTabHint /> : null}
         <span className="interactive-tile__arrow" aria-hidden>
           →
         </span>
@@ -86,28 +84,19 @@ type MotionButtonProps = HTMLMotionProps<"button"> & {
   children: ReactNode;
 };
 
-export function MotionButton({
-  children,
-  className = "",
-  ...props
-}: MotionButtonProps) {
-  return (
-    <motion.button
-      whileHover={hoverLift}
-      whileTap={tapPress}
-      transition={spring}
-      className={className}
-      {...props}
-    >
-      {children}
-    </motion.button>
-  );
-}
+export const MotionButton = forwardRef<HTMLButtonElement, MotionButtonProps>(
+  function MotionButton({ children, className = "", ...props }, ref) {
+    const interaction = useInteractionMotion(true);
 
-export const staggerContainer = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.045, delayChildren: 0.06 },
+    return (
+      <motion.button
+        ref={ref}
+        className={className}
+        {...interaction}
+        {...props}
+      >
+        {children}
+      </motion.button>
+    );
   },
-};
+);

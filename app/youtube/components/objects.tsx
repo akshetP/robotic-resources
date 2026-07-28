@@ -11,7 +11,7 @@ interface Youtube {
 export const YoutubeChannel: Youtube[] = [
   { name: "duckietown", displayName: "Duckietown", href: "https://www.youtube.com/@duckietown" },
   { name: "LearnRobotics by Liz Miller ", displayName: "Learn Robotics by Liz Miller", href: "https://www.youtube.com/@LearnRobotics" },
-  { name: "aniskoubaa237 by Anis Koubaa", displayName: "aniskoubaa237 by Anis Koubaa", href: "https://www.youtube.com/@aniskoubaa2327" },
+  { name: "aniskoubaa by Anis Koubaa", displayName: "Anis Koubaa", href: "https://www.youtube.com/@aniskoubaa" },
   { name: "articulated robotics", displayName: "Articulated Robotics", href: "https://www.youtube.com/@ArticulatedRobotics" },
   { name: "dronebot workshop", displayName: "Drone Bot Workshop", href: "https://www.youtube.com/@Dronebotworkshop" },
   { name: "hashrobotics", displayName: "Hash Robotics", href: "https://www.youtube.com/@HashRobotics" },

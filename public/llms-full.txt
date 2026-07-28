@@ -21,7 +21,7 @@ Get Into Robotics is a curated directory of robotics learning resources maintain
 - [ROSbloX](https://rosblox.github.io/): Building blocks that simplify a robot software stack
 - [andino](https://github.com/Ekumen-OS/andino): Open-source diff-drive robot for education and low-cost apps
 - [NASA JPL Open Source Rover](https://github.com/nasa-jpl/open-source-rover#getting-started): Build-it-yourself scaled Mars rover design
-- [F1TENTH](https://f1tenth.org/learn.html): Fast-paced autonomy foundations course/platform
+- [F1TENTH](https://f1tenth.readthedocs.io/en/main/): Fast-paced autonomy foundations course/platform
 - [Autoware Foundation](https://github.com/autowarefoundation): Leading open-source autonomous driving software
 - [OpenPodCar](https://github.com/OpenPodcar/OpenPodcar): Affordable open hardware/software for self-driving research
 - [Mini Pupper](https://minipupperdocs.readthedocs.io/en/latest/index.html): ROS OpenCV open-source Pi robot dog

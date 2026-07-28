@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/public/variant/variant";
+import { NewTabHint } from "@/lib/a11y";
+import { useReveal } from "@/lib/motion";
 
 export type LibraryItem = {
   title: string;
@@ -38,11 +39,18 @@ export default function ResourceSection({
 }: ResourceSectionProps) {
   const allFilters = filters?.length ? ["All", ...filters] : [];
   const [active, setActive] = useState(allFilters[0] ?? "All");
+  const headerReveal = useReveal("up", 0.08, 0.25);
+  const gridReveal = useReveal("up", 0.12, 0.15);
 
   const visible = useMemo(() => {
     if (!filters?.length || active === "All") return items;
     return items.filter((item) => item.type === active);
   }, [active, filters, items]);
+
+  const statusLabel =
+    active === "All"
+      ? `Showing ${visible.length} resources`
+      : `Showing ${visible.length} resources for ${active}`;
 
   return (
     <section
@@ -51,10 +59,7 @@ export default function ResourceSection({
     >
       <div className="section-shell">
         <motion.div
-          variants={fadeIn("up", 0.08)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
+          {...headerReveal}
           className="mb-8 flex flex-col gap-6 md:mb-10 md:flex-row md:items-end md:justify-between"
         >
           <div className="max-w-2xl">
@@ -71,11 +76,16 @@ export default function ResourceSection({
           </div>
 
           {allFilters.length > 0 && (
-            <div className="flex flex-wrap gap-2">
+            <div
+              role="group"
+              aria-label={`Filter ${title}`}
+              className="flex flex-wrap gap-2"
+            >
               {allFilters.map((filter) => (
                 <button
                   key={filter}
                   type="button"
+                  aria-pressed={active === filter}
                   onClick={() => setActive(filter)}
                   className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                     active === filter
@@ -90,11 +100,12 @@ export default function ResourceSection({
           )}
         </motion.div>
 
+        <p className="sr-only" aria-live="polite" aria-atomic="true">
+          {statusLabel}
+        </p>
+
         <motion.div
-          variants={fadeIn("up", 0.12)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.15 }}
+          {...gridReveal}
           className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
         >
           {visible.map((item) => (
@@ -108,12 +119,19 @@ export default function ResourceSection({
               <div className="mb-3 flex items-start justify-between gap-3">
                 <span className="type-chip">{item.type}</span>
                 {item.icon && (
-                  <Image src={item.icon} alt="" width={28} height={28} className="shrink-0" />
+                  <Image
+                    src={item.icon}
+                    alt=""
+                    width={28}
+                    height={28}
+                    className="shrink-0"
+                  />
                 )}
               </div>
               <h3 className="text-base font-medium leading-snug text-[var(--foreground)] group-hover:text-[var(--accent)]">
                 {item.title}
               </h3>
+              <NewTabHint />
               <span className="mt-4 inline-flex items-center gap-1 text-sm text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]">
                 Open
                 <span aria-hidden>→</span>
@@ -128,7 +146,10 @@ export default function ResourceSection({
               rel="noopener noreferrer"
               className="resource-card items-center justify-center border-dashed bg-[var(--accent-soft)]/40 text-center"
             >
-              <span className="font-medium text-[var(--accent)]">{moreLabel} →</span>
+              <span className="font-medium text-[var(--accent)]">
+                {moreLabel} →
+              </span>
+              <NewTabHint />
             </Link>
           )}
         </motion.div>

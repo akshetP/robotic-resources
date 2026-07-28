@@ -16,7 +16,7 @@ export const projects: ProjectItem[] = [
   { id: "2", name: "Open-Source Rover by NASA Jet Propulsion Laboratory", icon: "/images/projects/nasa.svg", href: "https://github.com/nasa-jpl/open-source-rover#getting-started" },
   { id: "3", name: "OpenPodCar", icon: "/images/projects/openpodcar.svg", href: "https://github.com/OpenPodcar/OpenPodcar" },
   { id: "4", name: "EROS - 1", icon: "/images/projects/pens-eros.svg", href: "https://github.com/PENS-EROS" },
-  { id: "5", name: "FITENTH", icon: "/images/projects/roboracer.svg", href: "https://f1tenth.org/learn.html" },
+  { id: "5", name: "F1TENTH", icon: "/images/projects/roboracer.svg", href: "https://f1tenth.readthedocs.io/en/main/" },
   { id: "6", name: "The Autoware Foundation", icon: "/images/projects/Autoware.svg", href: "https://github.com/autowarefoundation" },
   { id: "7", name: "machinascript-for-robots", icon: "/images/projects/babycommando.svg", href: "https://github.com/babycommando/machinascript-for-robots" },
   { id: "8", name: "Duckietown", icon: "/images/projects/duckietown.svg", href: "https://github.com/duckietown" },
