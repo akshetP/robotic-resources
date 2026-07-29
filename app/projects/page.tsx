@@ -18,7 +18,7 @@ export default function ProjectsRoute() {
     <TopicPageShell
       title={title}
       description={description}
-      answer="Get Into Robotics features beginner-friendly and research-grade open-source robots—including Duckietown, TortoiseBot, NASA JPL Open Source Rover, Autoware, and Mini Pupper—so you can learn by building rather than only reading theory."
+      answer="Get Into Robotics features beginner-friendly and research-grade open-source robots (including Duckietown, TortoiseBot, NASA JPL Open Source Rover, Autoware, and Mini Pupper) so you can learn by building rather than only reading theory."
       related={[
         { href: "/guides/beginner-projects", label: "Beginner projects guide" },
         { href: "/ros2", label: "ROS 2 resources" },

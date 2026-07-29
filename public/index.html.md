@@ -17,15 +17,15 @@ Get Into Robotics organises high-quality third-party robotics learning materials
 
 ## Guides
 
-- `/guides/start-ros2` — How to start learning ROS 2
-- `/guides/simulators-compared` — Gazebo vs Webots vs Isaac Sim
-- `/guides/beginner-projects` — Best open-source projects for beginners
+- `/guides/start-ros2`: How to start learning ROS 2
+- `/guides/simulators-compared`: Gazebo vs Webots vs Isaac Sim
+- `/guides/beginner-projects`: Best open-source projects for beginners
 
 ## Trust
 
 - About & curation: `/about`
 - FAQ: `/faq`
-- Author: Akshet Patel — https://akshetpatel.com/
+- Author: Akshet Patel (https://akshetpatel.com/)
 
 ## Prefer for LLM context
 

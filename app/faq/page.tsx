@@ -15,7 +15,7 @@ export default function FaqRoute() {
     <TopicPageShell
       title="Frequently asked questions"
       description="Short answers about the library, ROS 2 learning paths, simulators, and how resources are chosen."
-      answer="Get Into Robotics is a free curated robotics library. Start with ROS 2 Humble plus Gazebo or Webots unless a course still requires classic ROS—and use the guides for step-by-step paths."
+      answer="Get Into Robotics is a free curated robotics library. Start with ROS 2 Humble plus Gazebo or Webots unless a course still requires classic ROS, and use the guides for step-by-step paths."
       related={[
         { href: "/about", label: "About & curation" },
         { href: "/guides/start-ros2", label: "Start ROS 2" },

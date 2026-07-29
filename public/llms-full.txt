@@ -179,7 +179,7 @@ ROS is the classic middleware; ROS 2 is the modern successor. New learners shoul
 Gazebo or Webots for beginners; Isaac Sim or MuJoCo for advanced AI/physics workflows.
 
 **How are resources selected?**  
-Educational usefulness, open access where possible, active/recognised projects — see https://www.resourcesforrobotics.com/about
+Educational usefulness, open access where possible, active/recognised projects. See https://www.resourcesforrobotics.com/about
 
 **Is it free?**  
 Browsing the curated lists is free. Third-party linked materials may have their own licences or prices.

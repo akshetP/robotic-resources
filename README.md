@@ -1,6 +1,6 @@
 # Get Into Robotics
 
-Free curated robotics resources library — live site: [resourcesforrobotics.com](https://www.resourcesforrobotics.com)
+Free curated robotics resources library. Live site: [resourcesforrobotics.com](https://www.resourcesforrobotics.com)
 
 - Agent index: [llms.txt](https://www.resourcesforrobotics.com/llms.txt) · [llms-full.txt](https://www.resourcesforrobotics.com/llms-full.txt)
 - Guides: [/guides](https://www.resourcesforrobotics.com/guides) · About: [/about](https://www.resourcesforrobotics.com/about) · FAQ: [/faq](https://www.resourcesforrobotics.com/faq)

@@ -34,7 +34,7 @@ export function usePrefersReducedMotion() {
   return Boolean(useReducedMotion());
 }
 
-/** Enter animation via whileInView — no-ops when reduced motion is on. */
+/** Enter animation via whileInView: no-ops when reduced motion is on. */
 export function useReveal(
   direction: "up" | "down" | "left" | "right" = "up",
   delay = 0.08,
@@ -76,7 +76,7 @@ export function useStagger(amount: number = 0.12) {
   };
 }
 
-/** Hover / tap / focus lift — disabled under reduced motion. */
+/** Hover / tap / focus lift, disabled under reduced motion. */
 export function useInteractionMotion(lift = true) {
   const reduced = usePrefersReducedMotion();
   if (reduced || !lift) {

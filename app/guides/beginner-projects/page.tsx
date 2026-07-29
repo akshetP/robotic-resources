@@ -37,7 +37,7 @@ export default function BeginnerProjectsGuidePage() {
       </h2>
       <p>
         Priority goes to clear documentation, active communities, manageable
-        hardware cost bands, and a path into ROS or ROS&nbsp;2—not novelty
+        hardware cost bands, and a path into ROS or ROS&nbsp;2, not novelty
         demos with no learning ladder.
       </p>
 
@@ -46,23 +46,23 @@ export default function BeginnerProjectsGuidePage() {
       </h2>
       <ol className="list-decimal space-y-4 pl-5">
         <li>
-          <strong>Duckietown</strong> — education ecosystem for autonomy and AI
+          <strong>Duckietown</strong>: education ecosystem for autonomy and AI
           robotics with courses and simulation options.
         </li>
         <li>
-          <strong>TortoiseBot</strong> — learner-friendly, cost-conscious ROS
+          <strong>TortoiseBot</strong>: learner-friendly, cost-conscious ROS
           mobile robot for first hardware loops.
         </li>
         <li>
-          <strong>andino</strong> — open diff-drive platform aimed at education
+          <strong>andino</strong>: open diff-drive platform aimed at education
           and low-cost applications.
         </li>
         <li>
-          <strong>Mini Pupper</strong> — quadruped learning path with ROS and
+          <strong>Mini Pupper</strong>: quadruped learning path with ROS and
           vision-oriented docs.
         </li>
         <li>
-          <strong>NASA JPL Open Source Rover</strong> — ambitious build-it
+          <strong>NASA JPL Open Source Rover</strong>: ambitious build-it
           yourself rover once you want a longer mechanical project.
         </li>
       </ol>

@@ -46,7 +46,7 @@ export default function AboutPage() {
         <h2 className="font-display text-2xl font-semibold">Who it is for</h2>
         <p>
           Students, hobbyists, researchers, and engineers who need a trusted
-          map of where to learn—not another undifferentiated link dump.
+          map of where to learn, not another undifferentiated link dump.
         </p>
         <h2 className="font-display text-2xl font-semibold">How to cite</h2>
         <p>

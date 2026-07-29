@@ -18,7 +18,7 @@ export default function RepositoriesRoute() {
     <TopicPageShell
       title={title}
       description={description}
-      answer="Use these curated GitHub repositories—such as PythonRobotics and awesome robotics lists—to study algorithms, course notes, and machine-learning-for-robotics material alongside hands-on projects."
+      answer="Use these curated GitHub repositories, such as PythonRobotics and awesome robotics lists, to study algorithms, course notes, and machine-learning-for-robotics material alongside hands-on projects."
       related={[
         { href: "/projects", label: "Open-source projects" },
         { href: "/courses", label: "University courses" },

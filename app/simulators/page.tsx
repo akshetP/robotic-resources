@@ -18,7 +18,7 @@ export default function SimulatorsRoute() {
     <TopicPageShell
       title={title}
       description={description}
-      answer="Beginners usually start with Gazebo or Webots for ROS 2 practice. Choose NVIDIA Isaac Sim or MuJoCo when you need GPU-heavy perception, reinforcement learning, or advanced physics—then compare options in the simulator guide."
+      answer="Beginners usually start with Gazebo or Webots for ROS 2 practice. Choose NVIDIA Isaac Sim or MuJoCo when you need GPU-heavy perception, reinforcement learning, or advanced physics, then compare options in the simulator guide."
       related={[
         { href: "/guides/simulators-compared", label: "Simulator comparison" },
         { href: "/ros2", label: "ROS 2 resources" },

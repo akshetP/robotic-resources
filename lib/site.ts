@@ -40,7 +40,7 @@ export const siteConfig = {
     url: "/images/og-default.png",
     width: 1200,
     height: 630,
-    alt: "Get Into Robotics — free curated robotics resources library",
+    alt: "Get Into Robotics: free curated robotics resources library",
   },
   sections: [
     {

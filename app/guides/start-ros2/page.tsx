@@ -62,7 +62,7 @@ export default function StartRos2GuidePage() {
           subscriber, and inspect topics with the CLI.
         </li>
         <li>
-          Practise in a simulator—start with{" "}
+          Practise in a simulator, starting with{" "}
           <Link href="/simulators" className="text-[var(--accent)] underline">
             Gazebo or Webots
           </Link>
