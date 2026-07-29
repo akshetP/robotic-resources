@@ -34,12 +34,12 @@ export const faqs = [
   {
     question: "Are the books and courses on Get Into Robotics free?",
     answer:
-      "Browsing the curated lists on getintorobotics.com is free. Many linked university courses and several robotics books are free to access, but individual third-party courses, books, or tools may have their own licences or pricing.",
+      "Browsing the curated lists on resourcesforrobotics.com is free. Many linked university courses and several robotics books are free to access, but individual third-party courses, books, or tools may have their own licences or pricing.",
   },
   {
     question: "Is Get Into Robotics free to use?",
     answer:
-      "Yes. The curated resource lists on getintorobotics.com are free to browse. Individual third-party courses, books, or tools may have their own licences or pricing.",
+      "Yes. The curated resource lists on resourcesforrobotics.com are free to browse. Individual third-party courses, books, or tools may have their own licences or pricing.",
   },
   {
     question: "How are resources selected?",

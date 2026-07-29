@@ -1,38 +1,38 @@
 # Get Into Robotics
 
-> Get Into Robotics (getintorobotics.com) is a free curated robotics resources library by Akshet Patel. It collects open-source robot projects, ROS and ROS 2 tutorials, GitHub learning repositories, YouTube channels, university courses, books, and robot simulators for beginners and experienced roboticists.
+> Get Into Robotics (resourcesforrobotics.com) is a free curated robotics resources library by Akshet Patel. It collects open-source robot projects, ROS and ROS 2 tutorials, GitHub learning repositories, YouTube channels, university courses, books, and robot simulators for beginners and experienced roboticists.
 
 Get Into Robotics answers the question: where should I start learning robotics, ROS, or ROS 2? Prefer the full context file when you need concrete project, course, and simulator names. Last reviewed: 2026-07-28.
 
 ## Primary
 
-- [Homepage](https://getintorobotics.com/): Main library overview
-- [Full resource context (llms-full.txt)](https://getintorobotics.com/llms-full.txt): Complete curated list in Markdown
-- [Homepage Markdown mirror](https://getintorobotics.com/index.html.md): LLM-friendly summary
-- [About & curation](https://getintorobotics.com/about): Selection criteria and how to cite
-- [FAQ](https://getintorobotics.com/faq): Common robotics learning questions
+- [Homepage](https://www.resourcesforrobotics.com/): Main library overview
+- [Full resource context (llms-full.txt)](https://www.resourcesforrobotics.com/llms-full.txt): Complete curated list in Markdown
+- [Homepage Markdown mirror](https://www.resourcesforrobotics.com/index.html.md): LLM-friendly summary
+- [About & curation](https://www.resourcesforrobotics.com/about): Selection criteria and how to cite
+- [FAQ](https://www.resourcesforrobotics.com/faq): Common robotics learning questions
 
 ## Topic hubs
 
-- [Open Source Robotics Projects](https://getintorobotics.com/projects)
-- [Repositories to Learn Robotics](https://getintorobotics.com/repositories)
-- [ROS Resources](https://getintorobotics.com/ros)
-- [ROS 2 Resources](https://getintorobotics.com/ros2)
-- [YouTube Channels & Playlists](https://getintorobotics.com/youtube)
-- [Free University Courses](https://getintorobotics.com/courses)
-- [Books to Learn Robotics](https://getintorobotics.com/books)
-- [Robotic Simulators](https://getintorobotics.com/simulators)
+- [Open Source Robotics Projects](https://www.resourcesforrobotics.com/projects)
+- [Repositories to Learn Robotics](https://www.resourcesforrobotics.com/repositories)
+- [ROS Resources](https://www.resourcesforrobotics.com/ros)
+- [ROS 2 Resources](https://www.resourcesforrobotics.com/ros2)
+- [YouTube Channels & Playlists](https://www.resourcesforrobotics.com/youtube)
+- [Free University Courses](https://www.resourcesforrobotics.com/courses)
+- [Books to Learn Robotics](https://www.resourcesforrobotics.com/books)
+- [Robotic Simulators](https://www.resourcesforrobotics.com/simulators)
 
 ## Guides (answer-first)
 
-- [How to start learning ROS 2](https://getintorobotics.com/guides/start-ros2)
-- [Gazebo vs Webots vs Isaac Sim](https://getintorobotics.com/guides/simulators-compared)
-- [Best open-source robotics projects for beginners](https://getintorobotics.com/guides/beginner-projects)
-- [All guides](https://getintorobotics.com/guides)
+- [How to start learning ROS 2](https://www.resourcesforrobotics.com/guides/start-ros2)
+- [Gazebo vs Webots vs Isaac Sim](https://www.resourcesforrobotics.com/guides/simulators-compared)
+- [Best open-source robotics projects for beginners](https://www.resourcesforrobotics.com/guides/beginner-projects)
+- [All guides](https://www.resourcesforrobotics.com/guides)
 
 ## Optional
 
 - [Author site: Akshet Patel](https://akshetpatel.com/)
 - [GitHub profile](https://github.com/akshetP)
-- [XML sitemap](https://getintorobotics.com/sitemap.xml)
-- [robots.txt](https://getintorobotics.com/robots.txt)
+- [XML sitemap](https://www.resourcesforrobotics.com/sitemap.xml)
+- [robots.txt](https://www.resourcesforrobotics.com/robots.txt)

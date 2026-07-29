@@ -4,7 +4,7 @@ export const siteConfig = {
   title: "Get Into Robotics: Free ROS & Robotics Library",
   description:
     "Free curated robotics library: open-source projects, ROS & ROS 2 tutorials, courses, books, and simulators like Gazebo and Isaac Sim.",
-  url: "https://getintorobotics.com",
+  url: "https://www.resourcesforrobotics.com",
   locale: "en_GB",
   language: "en-GB",
   dateModified: "2026-07-28",

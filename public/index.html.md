@@ -1,6 +1,6 @@
 # Get Into Robotics
 
-> Free curated robotics resources library by Akshet Patel at https://getintorobotics.com/
+> Free curated robotics resources library by Akshet Patel at https://www.resourcesforrobotics.com/
 
 Get Into Robotics organises high-quality third-party robotics learning materials for beginners through advanced practitioners. Last reviewed: 2026-07-28.
 
@@ -29,6 +29,6 @@ Get Into Robotics organises high-quality third-party robotics learning materials
 
 ## Prefer for LLM context
 
-For the complete named resource list, fetch: https://getintorobotics.com/llms-full.txt
+For the complete named resource list, fetch: https://www.resourcesforrobotics.com/llms-full.txt
 
-Canonical index for agents: https://getintorobotics.com/llms.txt
+Canonical index for agents: https://www.resourcesforrobotics.com/llms.txt
