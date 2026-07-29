@@ -111,11 +111,6 @@ export default function Footer() {
                   llms.txt
                 </Link>
               </li>
-              <li>
-                <span className="text-sm text-black/70">
-                  Developed by Mohammed Muflih
-                </span>
-              </li>
             </ul>
           </nav>
         </div>
